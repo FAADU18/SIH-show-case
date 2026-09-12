@@ -1,5 +1,5 @@
 export const projectData = {
-  name: "PrivacyOS",
+  name: "VARMA",
   tagline: "On-Device AI",
   fullTitle: "On-Device Visual Perception for Lightweight Browser Agents",
   problemStatement: "SIH26171",

@@ -98,7 +98,7 @@ export default function Footer() {
           {/* Copyright */}
           <motion.div variants={itemVariants} className="text-sm text-gray-400 mb-6 md:mb-0">
             <p>
-              © 2026 PrivacyOS. Built for SIH26171.
+              © 2026 VARMA. Built for SIH26171.
             </p>
             <p className="text-xs mt-2">
               Privacy is not an afterthought. It's by design.

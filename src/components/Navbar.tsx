@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-1">
-            <div className="text-2xl font-bold text-navy-900">PRIVACYOS</div>
+            <div className="text-2xl font-bold text-navy-900">VARMA</div>
             <div className="text-xs font-medium text-tech-teal">ON-DEVICE AI</div>
           </div>
 
