@@ -1,37 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-navy-900: #0a0e27;
+  --color-navy-800: #1a1f3a;
+  --color-navy-700: #2a2f4f;
+  --color-privacy-50: #f0fdf4;
+  --color-privacy-100: #dcfce7;
+  --color-privacy-500: #22c55e;
+  --color-privacy-600: #16a34a;
+  --color-privacy-700: #15803d;
+  --color-tech-blue: #3b82f6;
+  --color-tech-purple: #a855f7;
+  --color-tech-teal: #14b8a6;
+}
 
 @layer base {
   * {
     @apply scroll-smooth;
   }
 
+  :root {
+    font-family: 'DM Sans', 'Segoe UI', sans-serif;
+    color: #172033;
+    background: #f7faf8;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
   body {
-    @apply bg-white text-gray-900;
+    @apply m-0 min-w-[320px] bg-white text-gray-900 antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  }
+
+  ::selection {
+    background: #bbf7d0;
+    color: #14532d;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-[#0a0e27] text-white rounded-lg font-semibold shadow-lg shadow-[#0a0e27]/15 hover:bg-[#1a1f3a] hover:-translate-y-0.5 transition-all duration-200;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border-2 border-gray-800 text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors;
+    @apply inline-flex items-center justify-center px-6 py-3 border border-[#0a0e27]/20 text-[#0a0e27] rounded-lg font-semibold bg-white/70 hover:border-[#0a0e27]/50 hover:bg-white hover:-translate-y-0.5 transition-all duration-200;
   }
 
   .container-wide {
-    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+    @apply mx-auto w-full px-5 sm:px-8 lg:px-10 max-w-7xl;
   }
 
   .section-padding {
-    @apply py-16 sm:py-24 lg:py-32;
+    @apply py-20 sm:py-24 lg:py-28;
   }
 
   .card {
-    @apply bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-white rounded-xl border border-gray-200/80 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200;
+  }
+
+  .hero-grid {
+    background-color: #f7faf8;
+    background-image: linear-gradient(rgba(20, 83, 45, 0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(20, 83, 45, 0.055) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: center top;
   }
 }

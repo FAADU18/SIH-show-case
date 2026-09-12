@@ -106,7 +106,7 @@ export default function Gallery() {
             >
               <div className="relative overflow-hidden rounded-lg bg-gray-200 aspect-video group-hover:shadow-xl transition-shadow duration-300">
                 <img
-                  src={`/src/assets/project/screenshots/${image.filename}`}
+                  src={image.src}
                   alt={image.caption}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   onError={(e) => {
@@ -157,7 +157,7 @@ export default function Gallery() {
                 {/* Image */}
                 <div className="relative bg-gray-900 rounded-lg overflow-hidden aspect-video">
                   <img
-                    src={`/src/assets/project/screenshots/${currentImage.filename}`}
+                    src={currentImage.src}
                     alt={currentImage.caption}
                     className="w-full h-full object-contain"
                   />

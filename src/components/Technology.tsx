@@ -74,7 +74,7 @@ export default function Technology() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="space-y-6"
+          className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3"
         >
           {categories.map((category, i) => {
             const Icon = category.icon;
@@ -82,20 +82,23 @@ export default function Technology() {
               <motion.div
                 key={i}
                 variants={itemVariants}
-                className="card p-8"
+                className="card group flex flex-col p-6"
               >
-                <div className="flex items-start space-x-6 mb-6">
-                  <div className={`p-4 bg-gradient-to-br ${category.color} rounded-lg text-white flex-shrink-0`}>
-                    <Icon size={32} />
-                  </div>
+                <div className="mb-6 flex items-start justify-between gap-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-navy-900">
+                    <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-gray-400">
+                      Layer {String(i + 1).padStart(2, '0')}
+                    </p>
+                    <h3 className="text-xl font-bold text-navy-900">
                       {category.title}
                     </h3>
                   </div>
+                  <div className={`rounded-xl bg-gradient-to-br ${category.color} p-3 text-white shadow-lg transition-transform duration-200 group-hover:scale-105`}>
+                    <Icon size={22} />
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                <div className="mt-auto flex flex-wrap gap-2">
                   {category.technologies.map((tech, j) => (
                     <motion.div
                       key={j}
@@ -103,7 +106,7 @@ export default function Technology() {
                       whileInView={{ opacity: 1 }}
                       transition={{ delay: j * 0.05 }}
                       viewport={{ once: true }}
-                      className={`px-4 py-3 bg-gradient-to-br ${category.color} bg-opacity-10 rounded-lg border border-gray-200 text-center hover:shadow-md transition-shadow`}
+                      className="rounded-full border border-gray-200 bg-gray-50 px-3 py-2 text-left text-sm font-semibold text-gray-700 transition-colors hover:border-tech-blue/40 hover:bg-privacy-50"
                     >
                       <p className="text-sm font-semibold text-gray-700">
                         {tech}

@@ -18,13 +18,13 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <nav className="sticky top-0 z-50 border-b border-gray-200/80 bg-white/90 shadow-sm backdrop-blur-md">
       <div className="container-wide">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-1">
-            <div className="text-2xl font-bold text-navy-900">VARMA</div>
-            <div className="text-xs font-medium text-tech-teal">ON-DEVICE AI</div>
+            <div className="text-2xl font-bold tracking-tight text-navy-900">VARMA</div>
+            <div className="hidden text-xs font-semibold uppercase tracking-[0.16em] text-tech-teal sm:block">On-device AI</div>
           </div>
 
           {/* Desktop Navigation */}
